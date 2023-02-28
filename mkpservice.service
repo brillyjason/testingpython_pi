@@ -1,0 +1,11 @@
+[Unit]
+Description=Prformances Monitoring File
+
+[Service]
+User=<user e.g. root>
+WorkingDirectory= /home/pi/testing/
+ExecStart=/usr/bin/node /home/pi/testing/bin/activate --workers
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
